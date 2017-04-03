@@ -10,9 +10,9 @@ struct students{
     int marks;
 
 };
-
-
 typedef struct students student;
+
+//crap
 
 int main(){
 
