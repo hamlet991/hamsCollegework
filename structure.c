@@ -2,13 +2,18 @@
 #include <string.h>
 #include <stdlib.h>
 #include <conio.h>
+
+
 struct students{
     char name[20];
     int rollno;
     int marks;
 
 };
+
+
 typedef struct students student;
+
 int main(){
 
     char yname[10];
