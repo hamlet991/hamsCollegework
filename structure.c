@@ -55,10 +55,15 @@ int main(){
     if(fp==NULL){
         printf("Something's wrong");
     }
+	
+	
     /*fpp = fopen("student.txt","r+");
     if(fpp==NULL){
         printf("Something's wrong")
     } */
+	
+	
+	
     while(fread(&test,sizeof(test),1,fp)>0){
         if(strcmp(test.name,yname)==0){
             fseek(fp,-sizeof(test),SEEK_CUR);
@@ -72,6 +77,8 @@ int main(){
             break;
         }
     }
+	
+	
     fclose(fp);
     printf("Now the informations are:\n");
     fp = fopen("student.txt","r");
