@@ -12,7 +12,7 @@ struct students{
 };
 typedef struct students student;
 
-//crap
+//shit
 
 int main(){
 
