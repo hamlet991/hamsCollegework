@@ -1,3 +1,9 @@
+/*
+Done using Borland C/C++ compiler
+Check whether you have this compiler before starting this project
+*/
+
+
 //Header files
 #include <stdio.h>
 #include <conio.h>
@@ -20,13 +26,14 @@ void record();
 void matrixmult();
 void sort(int arg1);
 void temperature();
+void pascal_triangle();
 
 //The main function
 int main(){
     int dec,n,i;
     //To repeat these statement over and over again
     while(9){
-        printf("\nProgram options:\n1:Palindrome\n2:Armstrong\n3:Reverse\n4:Fibonacci\n5:Record\n6:Matrix multiplication\n7:Sort\n8:Leap year\n9:Convert temperature\n0:Exit\nSo what's up:");
+        printf("\nProgram options:\n1:Palindrome\n2:Armstrong\n3:Reverse\n4:Fibonacci\n5:Record\n6:Matrix multiplication\n7:Sort\n8:Leap year\n9:Convert temperature\n10: Pascal's Triangle\n0:Exit\nSo what's up:");
         scanf("%d",&dec);
         switch(dec){
         case 1:
@@ -82,6 +89,11 @@ int main(){
         case 9:
             temperature();
             break;
+
+	case 10:
+		pascal_triangle();
+
+
         case 0:
             //Exits from the program
             exit(0);
@@ -202,6 +214,46 @@ void matrixmult(){
         }
         printf("\n");
     }
+}
+
+
+void pascal_triangle(){
+
+//variable declaration and intialization
+    int i=0;
+    int j=0;
+    int k=0;
+    int c=0;
+    int n=0;
+
+	printf("Enter any number till you want to see pascal's triangle ");
+	scanf("%d",n);
+
+    for(i=0;i<n;i++)
+
+
+    {
+        for(k=n;k>i;k--)
+        printf(" ");	//adds the space according to loop
+
+        for(j=1;j<=i;j++)
+            printf("%d",j);	//prints j until n in ascending order in procedural way
+
+
+        for(c=0;c<=j+i;c++){
+            printf("%d",j--); // prints j in descending order
+            if(j==0)
+            break;
+        }
+
+        printf("\n");
+
+    }
+
+printf(" press any key to go back to main menu ");
+getch();
+main();
+
 }
 
 void sort(int num){
