@@ -227,7 +227,7 @@ void pascal_triangle(){
     int n=0;
 
 	printf("Enter any number till you want to see pascal's triangle ");
-	scanf("%d",n);
+	scanf("%d",&n);
 
     for(i=0;i<n;i++)
 
@@ -250,9 +250,6 @@ void pascal_triangle(){
 
     }
 
-printf(" press any key to go back to main menu ");
-getch();
-main();
 
 }
 
